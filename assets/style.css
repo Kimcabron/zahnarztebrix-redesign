@@ -86,3 +86,12 @@
   .hero h1{font-size:42px;letter-spacing:-2px}
   .hero-photo{height:300px}
 }
+
+/* Laufband (Ferien-Hinweis, Text aus Google-Tabelle) */
+.laufband{background:var(--accent);color:var(--green-dark);font-weight:700;font-size:15px;overflow:hidden;white-space:nowrap;border-bottom:1px solid var(--line)}
+.laufband__spur{display:flex;width:max-content;animation:laufband 30s linear infinite}
+.laufband:hover .laufband__spur{animation-play-state:paused}
+.laufband p{margin:0;padding:10px 0;flex:none}
+@keyframes laufband{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.laufband{white-space:normal;text-align:center;padding:0 16px}.laufband__spur{animation:none!important;width:auto}.laufband p[aria-hidden]{display:none}}
+@media print{.laufband{display:none}}
